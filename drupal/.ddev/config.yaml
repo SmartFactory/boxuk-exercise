@@ -12,6 +12,7 @@ database:
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
+host_webserver_port: "80"
 
 # Key features of DDEV's config.yaml:
 

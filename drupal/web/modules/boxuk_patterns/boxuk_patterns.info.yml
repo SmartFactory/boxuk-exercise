@@ -1,0 +1,5 @@
+name: 'BoxUK Patterns'
+type: module
+description: 'Demonstrates design patterns (Pipeline & Facade) for clean, testable, and maintainable bundle classes.'
+package: 'Custom'
+core_version_requirement: ^10

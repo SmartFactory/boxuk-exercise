@@ -1,0 +1,7 @@
+services:
+  boxuk_patterns.pipeline:
+    class: Drupal\boxuk_patterns\Pipe\Pipeline
+    factory: [Drupal\boxuk_patterns\Pipe\Pipeline, create]
+
+  boxuk_patterns.article_formatter:
+    class: Drupal\boxuk_patterns\ArticleFormatter

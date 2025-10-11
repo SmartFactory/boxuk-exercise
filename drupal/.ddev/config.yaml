@@ -1,7 +1,7 @@
 name: drupal
-type: drupal10
+type: drupal11
 docroot: web
-php_version: "8.1"
+php_version: "8.3"
 webserver_type: nginx-fpm
 xdebug_enabled: false
 additional_hostnames: []
@@ -12,7 +12,6 @@ database:
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
-host_webserver_port: "80"
 
 # Key features of DDEV's config.yaml:
 

@@ -19,35 +19,6 @@
 #}
 {% set style_data = node.getStyleData() %}
 
-{# Example: Using data from HeaderPipe #}
-{% if style_data.header %}
-  <section class="article-header">
-    <div class="header-content">{{ style_data.header }}</div>
-  </section>
-{% endif %}
-
-{# Example: Using data from TitlePipe #}
-{% if style_data.title %}
-  <div class="title-data">
-    <p>Title: {{ style_data.title.text }}</p>
-    <p>Formatted: {{ style_data.title.formatted }}</p>
-  </div>
-{% endif %}
-
-{# Example: Using data from AuthorPipe #}
-{% if style_data.author %}
-  <div class="author-info">
-    <p>By {{ style_data.author.name }} (ID: {{ style_data.author.id }})</p>
-  </div>
-{% endif %}
-
-{# Example: Using data from DatePipe #}
-{% if style_data.dates %}
-  <div class="date-info">
-    <p>Created: {{ style_data.dates.created.formatted }}</p>
-    <p>Last updated: {{ style_data.dates.changed.formatted }}</p>
-  </div>
-{% endif %}
 <article{{ attributes.addClass('node', 'node--type-' ~ node.bundle|clean_class) }}>
 
   {{ title_prefix }}
@@ -68,8 +39,14 @@
     </footer>
   {% endif %}
 
+  {% if style_data.reading_stats %}
+    {% include '@boxuk_patterns/reading-stats.html.twig' with {
+      'word_count': style_data.reading_stats.word_count,
+      'reading_time': style_data.reading_stats.reading_time
+    } %}
+  {% endif %}
+
   <div{{ content_attributes.addClass('node__content') }}>
-    {# Example of using custom style_data from bundle class #}
     {% if style_data.header %}
       <div class="custom-header">{{ style_data.header }}</div>
     {% endif %}

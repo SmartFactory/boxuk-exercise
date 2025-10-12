@@ -6,7 +6,7 @@ use Drupal\boxuk_patterns\ArticleFormatter;
 use Drupal\boxuk_patterns\Pipe\Pipeline;
 use Drupal\boxuk_patterns\StyleData\Pipe\AuthorPipe;
 use Drupal\boxuk_patterns\StyleData\Pipe\DatePipe;
-use Drupal\boxuk_patterns\StyleData\Pipe\HeaderPipe;
+use Drupal\boxuk_patterns\StyleData\Pipe\ReadingStatsPipe;
 use Drupal\boxuk_patterns\StyleData\Pipe\TitlePipe;
 use Drupal\node\Entity\Node;
 
@@ -21,7 +21,7 @@ use Drupal\node\Entity\Node;
  * a clean API on the entity itself while keeping the logic testable and
  * reusable in a separate service.
  */
-final class BoxUkArticle extends Node {
+final class BoxUkArticle extends Node implements ArticleInterface {
 
   /**
    * The article formatter service.
@@ -57,10 +57,10 @@ final class BoxUkArticle extends Node {
     return Pipeline::create()
       ->send($this)
       ->through([
-        HeaderPipe::class,
         TitlePipe::class,
         AuthorPipe::class,
         DatePipe::class,
+        ReadingStatsPipe::class,
         // Add more pipes here as needed.
         // Each pipe will add its data to the result array.
       ])

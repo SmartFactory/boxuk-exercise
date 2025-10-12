@@ -98,18 +98,6 @@ class BoxUkArticleTest extends KernelTestBase {
   }
 
   /**
-   * Test getStyleData includes data from HeaderPipe.
-   *
-   * @covers ::getStyleData
-   */
-  public function testGetStyleDataIncludesHeader(): void {
-    $result = $this->article->getStyleData();
-
-    $this->assertArrayHasKey('header', $result);
-    $this->assertEquals('This is the header', $result['header']);
-  }
-
-  /**
    * Test getStyleData includes data from TitlePipe.
    *
    * @covers ::getStyleData

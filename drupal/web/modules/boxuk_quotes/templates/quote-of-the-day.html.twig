@@ -1,0 +1,91 @@
+{#
+/**
+ * @file
+ * Reusable component for displaying quote of the day.
+ *
+ * This component displays an inspirational quote from the quotes.rest API.
+ * It's designed to be reusable across different layouts and contexts.
+ *
+ * Available variables:
+ * - quote: (string) The quote text (required)
+ * - author: (string) The author of the quote (required)
+ * - category: (string) The quote category (optional)
+ * - format: (string) Display format: 'block' or 'inline' (default: 'block')
+ * - show_category: (bool) Whether to show category (default: false)
+ * - classes: (array) Additional CSS classes to apply
+ *
+ * Usage examples:
+ *
+ * Basic usage (block format):
+ * @code
+ * {% include '@boxuk_quotes/quote-of-the-day.html.twig' with {
+ *   'quote': 'The only way to do great work is to love what you do.',
+ *   'author': 'Steve Jobs'
+ * } %}
+ * @endcode
+ *
+ * With category displayed:
+ * @code
+ * {% include '@boxuk_quotes/quote-of-the-day.html.twig' with {
+ *   'quote': 'Success is not final, failure is not fatal.',
+ *   'author': 'Winston Churchill',
+ *   'category': 'inspire',
+ *   'show_category': true
+ * } %}
+ * @endcode
+ *
+ * Using with pipeline data:
+ * @code
+ * {% set style_data = node.getStyleData() %}
+ * {% if style_data.quote_of_the_day %}
+ *   {% include '@boxuk_quotes/quote-of-the-day.html.twig' with {
+ *     'quote': style_data.quote_of_the_day.quote,
+ *     'author': style_data.quote_of_the_day.author,
+ *     'category': style_data.quote_of_the_day.category
+ *   } %}
+ * {% endif %}
+ * @endcode
+ */
+#}
+
+{# Set default values #}
+{% set format = format|default('block') %}
+{% set show_category = show_category is defined ? show_category : false %}
+{% set additional_classes = classes|default([]) %}
+
+{# Build CSS classes #}
+{% set css_classes = [
+  'quote-of-the-day',
+  'quote-of-the-day--' ~ format,
+] %}
+
+{# Add any additional classes passed in #}
+{% if additional_classes %}
+  {% set css_classes = css_classes|merge(additional_classes) %}
+{% endif %}
+
+{# Only render if we have required data #}
+{% if quote and author %}
+  <blockquote class="{{ css_classes|join(' ') }}" role="complementary" aria-label="Quote of the day">
+
+    {# Quote text #}
+    <p class="quote-of-the-day__text">
+      <span class="quote-of-the-day__quotemark" aria-hidden="true">"</span>
+      {{ quote }}
+      <span class="quote-of-the-day__quotemark" aria-hidden="true">"</span>
+    </p>
+
+    {# Author attribution #}
+    <footer class="quote-of-the-day__footer">
+      <cite class="quote-of-the-day__author">— {{ author }}</cite>
+
+      {# Category (optional) #}
+      {% if show_category and category %}
+        <span class="quote-of-the-day__category" aria-label="Category">
+          ({{ category }})
+        </span>
+      {% endif %}
+    </footer>
+
+  </blockquote>
+{% endif %}

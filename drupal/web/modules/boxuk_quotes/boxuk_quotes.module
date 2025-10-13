@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * BoxUK Quotes module file.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function boxuk_quotes_theme(): array {
+  return [
+    'quote_of_the_day' => [
+      'variables' => [
+        'quote' => NULL,
+        'author' => NULL,
+        'category' => NULL,
+      ],
+      'template' => 'quote-of-the-day',
+    ],
+  ];
+}

@@ -1,0 +1,4 @@
+services:
+  boxuk_quotes.api_client:
+    class: Drupal\boxuk_quotes\QuotesApiClient
+    arguments: ['@http_client']

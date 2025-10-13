@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Theme override to display an article node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}.
+ * - url: Direct URL of the current node.
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: Same as attributes, except applied to the main title tag.
+ * - content_attributes: Same as attributes, except applied to the main content tag.
+ * - style_data: Custom data from the bundle class getStyleData() method.
+ *
+ * @see template_preprocess_node()
+ */
+#}
+{% set style_data = node.getStyleData() %}
+
+<article{{ attributes.addClass('node', 'node--type-' ~ node.bundle|clean_class) }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer class="node__meta">
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('node__submitted') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  {% if style_data.reading_stats %}
+    {% include '@boxuk_patterns/reading-stats.html.twig' with {
+      'word_count': style_data.reading_stats.word_count,
+      'reading_time': style_data.reading_stats.reading_time
+    } %}
+  {% endif %}
+
+  <div{{ content_attributes.addClass('node__content') }}>
+    {% if style_data.header %}
+      <div class="custom-header">{{ style_data.header }}</div>
+    {% endif %}
+
+    {{ content }}
+  </div>
+
+</article>

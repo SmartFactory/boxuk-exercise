@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Drupal\Tests\boxuk_jokes\Unit;
 
 use Drupal\boxuk_jokes\JokeApiClient;
@@ -28,17 +26,11 @@ class JokesApiClientTest extends UnitTestCase {
    * @covers ::isValidResponse
    */
   public function testGetJokeOfTheDayReturnsJoke(): void {
-    // Create mock response data.
+    // Create mock response data matching icanhazdadjoke.com API structure.
     $responseData = [
-      'contents' => [
-        'jokes' => [
-          [
-            'joke' => 'The only way to do great work is to love what you do.',
-            'author' => 'Steve Jobs',
-            'category' => 'inspire',
-          ],
-        ],
-      ],
+      'id' => 'R7UfaahVfFd',
+      'joke' => 'Why don\'t scientists trust atoms? Because they make up everything!',
+      'status' => 200,
     ];
 
     // Mock the HTTP client and response.
@@ -50,26 +42,21 @@ class JokesApiClientTest extends UnitTestCase {
 
     // Assert we got a Joke object with correct data.
     $this->assertInstanceOf(Joke::class, $joke);
-    $this->assertEquals('The only way to do great work is to love what you do.', $joke->getJoke());
-    $this->assertEquals('Steve Jobs', $joke->getAuthor());
-    $this->assertEquals('inspire', $joke->getCategory());
+    $this->assertEquals('Why don\'t scientists trust atoms? Because they make up everything!', $joke->getJoke());
+    $this->assertEquals('icanhazdadjoke.com', $joke->getAuthor());
+    $this->assertEquals('humor', $joke->getCategory());
   }
 
   /**
-   * Test API response without category uses default.
+   * Test API response uses hardcoded author and category.
    *
    * @covers ::getJokeOfTheDay
    */
-  public function testGetJokeOfTheDayWithoutCategory(): void {
+  public function testGetJokeOfTheDayUsesHardcodedMetadata(): void {
     $responseData = [
-      'contents' => [
-        'jokes' => [
-          [
-            'joke' => 'Test joke',
-            'author' => 'Test Author',
-          ],
-        ],
-      ],
+      'id' => 'abc123',
+      'joke' => 'What do you call a fake noodle? An impasta!',
+      'status' => 200,
     ];
 
     $httpClient = $this->createMockHttpClient($responseData);
@@ -77,7 +64,8 @@ class JokesApiClientTest extends UnitTestCase {
     $joke = $apiClient->getJokeOfTheDay();
 
     $this->assertInstanceOf(Joke::class, $joke);
-    $this->assertEquals('inspire', $joke->getCategory());
+    $this->assertEquals('icanhazdadjoke.com', $joke->getAuthor());
+    $this->assertEquals('humor', $joke->getCategory());
   }
 
   /**
@@ -138,25 +126,20 @@ class JokesApiClientTest extends UnitTestCase {
    * Test response with empty joke text returns null.
    *
    * @covers ::getJokeOfTheDay
+   * @covers ::isValidResponse
    */
   public function testGetJokeOfTheDayWithEmptyJokeTextReturnsNull(): void {
     $responseData = [
-      'contents' => [
-        'jokes' => [
-          [
-            'joke' => '',
-            'author' => 'Someone',
-            'category' => 'inspire',
-          ],
-        ],
-      ],
+      'id' => 'xyz789',
+      'joke' => '',
+      'status' => 200,
     ];
 
     $httpClient = $this->createMockHttpClient($responseData);
     $apiClient = new JokeApiClient($httpClient);
     $joke = $apiClient->getJokeOfTheDay();
 
-    // Should return null because Joke constructor validates non-empty.
+    // Should return null because isValidResponse() checks for non-empty joke.
     $this->assertNull($joke);
   }
 

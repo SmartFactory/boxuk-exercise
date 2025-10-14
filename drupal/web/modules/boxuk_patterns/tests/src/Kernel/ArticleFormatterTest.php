@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Drupal\Tests\boxuk_patterns\Kernel;
 
 use Drupal\boxuk_patterns\ArticleFormatter;

@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Drupal\Tests\boxuk_jokes\Unit\Pipe;
 
 use Drupal\boxuk_jokes\Pipe\JokeOfTheDayPipe;

@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Drupal\boxuk_patterns;
 
 use Drupal\node\NodeInterface;

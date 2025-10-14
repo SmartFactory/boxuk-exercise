@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Drupal\Tests\boxuk_quotes\Unit\Pipe;
 
 use Drupal\boxuk_quotes\Pipe\QuoteOfTheDayPipe;
-use Drupal\boxuk_quotes\QuotesApiClient;
-use Drupal\boxuk_quotes\ValueObject\Quote;
+use Drupal\boxuk_quotes\JokeApiClient;
+use Drupal\boxuk_quotes\ValueObject\Joke;
 use Drupal\Tests\UnitTestCase;
 
 /**
@@ -32,8 +32,8 @@ class QuoteOfTheDayPipeTest extends UnitTestCase {
    */
   public function testHandleReturnsCorrectStructure(): void {
     // Create a mock quote object.
-    $quote = new Quote(
-      quote: 'The only way to do great work is to love what you do.',
+    $quote = new Joke(
+      joke: 'The only way to do great work is to love what you do.',
       author: 'Steve Jobs',
       category: 'inspire',
     );
@@ -73,8 +73,8 @@ class QuoteOfTheDayPipeTest extends UnitTestCase {
    * @covers ::handle
    */
   public function testQuoteArrayHasRequiredKeys(): void {
-    $quote = new Quote(
-      quote: 'Success is not final, failure is not fatal.',
+    $quote = new Joke(
+      joke: 'Success is not final, failure is not fatal.',
       author: 'Winston Churchill',
       category: 'inspire',
     );

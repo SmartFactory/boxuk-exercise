@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\boxuk_quotes\Unit\ValueObject;
 
-use Drupal\boxuk_quotes\ValueObject\Quote;
+use Drupal\boxuk_quotes\ValueObject\Joke;
 use Drupal\Tests\UnitTestCase;
 
 /**
  * Tests for the Quote value object.
  *
  * @group boxuk_quotes
- * @coversDefaultClass \Drupal\boxuk_quotes\ValueObject\Quote
+ * @coversDefaultClass \Drupal\boxuk_quotes\ValueObject\Joke
  */
 class QuoteTest extends UnitTestCase {
 
@@ -19,18 +19,18 @@ class QuoteTest extends UnitTestCase {
    * Test creating a valid Quote object.
    *
    * @covers ::__construct
-   * @covers ::getQuote
+   * @covers ::getJoke
    * @covers ::getAuthor
    * @covers ::getCategory
    */
   public function testCreateValidQuote(): void {
-    $quote = new Quote(
-      quote: 'The only way to do great work is to love what you do.',
+    $quote = new Joke(
+      joke: 'The only way to do great work is to love what you do.',
       author: 'Steve Jobs',
       category: 'inspire',
     );
 
-    $this->assertEquals('The only way to do great work is to love what you do.', $quote->getQuote());
+    $this->assertEquals('The only way to do great work is to love what you do.', $quote->getJoke());
     $this->assertEquals('Steve Jobs', $quote->getAuthor());
     $this->assertEquals('inspire', $quote->getCategory());
   }
@@ -41,8 +41,8 @@ class QuoteTest extends UnitTestCase {
    * @covers ::toArray
    */
   public function testToArrayReturnsCorrectStructure(): void {
-    $quote = new Quote(
-      quote: 'Success is not final, failure is not fatal.',
+    $quote = new Joke(
+      joke: 'Success is not final, failure is not fatal.',
       author: 'Winston Churchill',
       category: 'inspire',
     );
@@ -67,8 +67,8 @@ class QuoteTest extends UnitTestCase {
     $this->expectException(\InvalidArgumentException::class);
     $this->expectExceptionMessage('Quote text cannot be empty.');
 
-    new Quote(
-      quote: '',
+    new Joke(
+      joke: '',
       author: 'Someone',
       category: 'inspire',
     );
@@ -83,8 +83,8 @@ class QuoteTest extends UnitTestCase {
     $this->expectException(\InvalidArgumentException::class);
     $this->expectExceptionMessage('Author cannot be empty.');
 
-    new Quote(
-      quote: 'Some quote',
+    new Joke(
+      joke: 'Some quote',
       author: '',
       category: 'inspire',
     );
@@ -94,21 +94,21 @@ class QuoteTest extends UnitTestCase {
    * Test that Quote object is immutable.
    *
    * @covers ::__construct
-   * @covers ::getQuote
+   * @covers ::getJoke
    */
   public function testQuoteIsImmutable(): void {
-    $quote = new Quote(
-      quote: 'Original quote',
+    $quote = new Joke(
+      joke: 'Original quote',
       author: 'Original author',
       category: 'inspire',
     );
 
-    $quoteText = $quote->getQuote();
+    $quoteText = $quote->getJoke();
     $this->assertEquals('Original quote', $quoteText);
 
     // Verify that we can't modify the returned value and affect the object.
     $quoteText = 'Modified quote';
-    $this->assertEquals('Original quote', $quote->getQuote());
+    $this->assertEquals('Original quote', $quote->getJoke());
   }
 
 }

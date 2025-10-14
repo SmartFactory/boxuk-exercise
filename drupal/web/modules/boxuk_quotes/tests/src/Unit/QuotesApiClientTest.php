@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Drupal\Tests\boxuk_quotes\Unit;
 
-use Drupal\boxuk_quotes\QuotesApiClient;
-use Drupal\boxuk_quotes\ValueObject\Quote;
+use Drupal\boxuk_quotes\JokeApiClient;
+use Drupal\boxuk_quotes\ValueObject\Joke;
 use Drupal\Tests\UnitTestCase;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -16,7 +16,7 @@ use Psr\Http\Message\StreamInterface;
  * Tests for the QuotesApiClient service.
  *
  * @group boxuk_quotes
- * @coversDefaultClass \Drupal\boxuk_quotes\QuotesApiClient
+ * @coversDefaultClass \Drupal\boxuk_quotes\JokeApiClient
  */
 class QuotesApiClientTest extends UnitTestCase {
 
@@ -45,12 +45,12 @@ class QuotesApiClientTest extends UnitTestCase {
     $httpClient = $this->createMockHttpClient($responseData);
 
     // Create the API client and fetch quote.
-    $apiClient = new QuotesApiClient($httpClient);
+    $apiClient = new JokeApiClient($httpClient);
     $quote = $apiClient->getQuoteOfTheDay();
 
     // Assert we got a Quote object with correct data.
-    $this->assertInstanceOf(Quote::class, $quote);
-    $this->assertEquals('The only way to do great work is to love what you do.', $quote->getQuote());
+    $this->assertInstanceOf(Joke::class, $quote);
+    $this->assertEquals('The only way to do great work is to love what you do.', $quote->getJoke());
     $this->assertEquals('Steve Jobs', $quote->getAuthor());
     $this->assertEquals('inspire', $quote->getCategory());
   }
@@ -73,10 +73,10 @@ class QuotesApiClientTest extends UnitTestCase {
     ];
 
     $httpClient = $this->createMockHttpClient($responseData);
-    $apiClient = new QuotesApiClient($httpClient);
+    $apiClient = new JokeApiClient($httpClient);
     $quote = $apiClient->getQuoteOfTheDay();
 
-    $this->assertInstanceOf(Quote::class, $quote);
+    $this->assertInstanceOf(Joke::class, $quote);
     $this->assertEquals('inspire', $quote->getCategory());
   }
 
@@ -97,7 +97,7 @@ class QuotesApiClientTest extends UnitTestCase {
     ];
 
     $httpClient = $this->createMockHttpClient($responseData);
-    $apiClient = new QuotesApiClient($httpClient);
+    $apiClient = new JokeApiClient($httpClient);
     $quote = $apiClient->getQuoteOfTheDay();
 
     $this->assertNull($quote);
@@ -111,7 +111,7 @@ class QuotesApiClientTest extends UnitTestCase {
    */
   public function testGetQuoteOfTheDayWithEmptyResponseReturnsNull(): void {
     $httpClient = $this->createMockHttpClient([]);
-    $apiClient = new QuotesApiClient($httpClient);
+    $apiClient = new JokeApiClient($httpClient);
     $quote = $apiClient->getQuoteOfTheDay();
 
     $this->assertNull($quote);
@@ -128,7 +128,7 @@ class QuotesApiClientTest extends UnitTestCase {
     $httpClient->method('request')
       ->willThrowException($this->createMock(RequestException::class));
 
-    $apiClient = new QuotesApiClient($httpClient);
+    $apiClient = new JokeApiClient($httpClient);
     $quote = $apiClient->getQuoteOfTheDay();
 
     $this->assertNull($quote);
@@ -153,7 +153,7 @@ class QuotesApiClientTest extends UnitTestCase {
     ];
 
     $httpClient = $this->createMockHttpClient($responseData);
-    $apiClient = new QuotesApiClient($httpClient);
+    $apiClient = new JokeApiClient($httpClient);
     $quote = $apiClient->getQuoteOfTheDay();
 
     // Should return null because Quote constructor validates non-empty.

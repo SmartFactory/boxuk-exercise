@@ -8,12 +8,12 @@ namespace Drupal\boxuk_quotes\ValueObject;
  * This value object encapsulates all the data related to a single quote,
  * ensuring type safety and immutability throughout the application.
  */
-final class Quote {
+final class Joke {
 
   /**
    * Constructs a Quote value object.
    *
-   * @param string $quote
+   * @param string $joke
    *   The quote text.
    * @param string $author
    *   The author of the quote.
@@ -21,11 +21,11 @@ final class Quote {
    *   The category of the quote.
    */
   public function __construct(
-    private readonly string $quote,
+    private readonly string $joke,
     private readonly string $author,
     private readonly string $category,
   ) {
-    if (empty($quote)) {
+    if (empty($joke)) {
       throw new \InvalidArgumentException('Quote text cannot be empty.');
     }
     if (empty($author)) {
@@ -39,8 +39,8 @@ final class Quote {
    * @return string
    *   The quote text.
    */
-  public function getQuote(): string {
-    return $this->quote;
+  public function getJoke(): string {
+    return $this->joke;
   }
 
   /**
@@ -71,7 +71,7 @@ final class Quote {
    */
   public function toArray(): array {
     return [
-      'quote' => $this->quote,
+      'quote' => $this->joke,
       'author' => $this->author,
       'category' => $this->category,
     ];

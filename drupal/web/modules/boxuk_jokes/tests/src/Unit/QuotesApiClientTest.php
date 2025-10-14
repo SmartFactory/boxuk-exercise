@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Drupal\Tests\boxuk_quotes\Unit;
+namespace Drupal\Tests\boxuk_jokes\Unit;
 
-use Drupal\boxuk_quotes\JokeApiClient;
-use Drupal\boxuk_quotes\ValueObject\Joke;
+use Drupal\boxuk_jokes\JokeApiClient;
+use Drupal\boxuk_jokes\ValueObject\Joke;
 use Drupal\Tests\UnitTestCase;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -13,27 +13,27 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 
 /**
- * Tests for the QuotesApiClient service.
+ * Tests for the JokesApiClient service.
  *
- * @group boxuk_quotes
- * @coversDefaultClass \Drupal\boxuk_quotes\JokeApiClient
+ * @group boxuk_jokes
+ * @coversDefaultClass \Drupal\boxuk_jokes\JokeApiClient
  */
-class QuotesApiClientTest extends UnitTestCase {
+class JokesApiClientTest extends UnitTestCase {
 
   /**
-   * Test successful API response returns Quote object.
+   * Test successful API response returns Joke object.
    *
    * @covers ::__construct
-   * @covers ::getQuoteOfTheDay
+   * @covers ::getJokeOfTheDay
    * @covers ::isValidResponse
    */
-  public function testGetQuoteOfTheDayReturnsQuote(): void {
+  public function testGetJokeOfTheDayReturnsJoke(): void {
     // Create mock response data.
     $responseData = [
       'contents' => [
-        'quotes' => [
+        'jokes' => [
           [
-            'quote' => 'The only way to do great work is to love what you do.',
+            'joke' => 'The only way to do great work is to love what you do.',
             'author' => 'Steve Jobs',
             'category' => 'inspire',
           ],
@@ -44,28 +44,28 @@ class QuotesApiClientTest extends UnitTestCase {
     // Mock the HTTP client and response.
     $httpClient = $this->createMockHttpClient($responseData);
 
-    // Create the API client and fetch quote.
+    // Create the API client and fetch joke.
     $apiClient = new JokeApiClient($httpClient);
-    $quote = $apiClient->getQuoteOfTheDay();
+    $joke = $apiClient->getJokeOfTheDay();
 
-    // Assert we got a Quote object with correct data.
-    $this->assertInstanceOf(Joke::class, $quote);
-    $this->assertEquals('The only way to do great work is to love what you do.', $quote->getJoke());
-    $this->assertEquals('Steve Jobs', $quote->getAuthor());
-    $this->assertEquals('inspire', $quote->getCategory());
+    // Assert we got a Joke object with correct data.
+    $this->assertInstanceOf(Joke::class, $joke);
+    $this->assertEquals('The only way to do great work is to love what you do.', $joke->getJoke());
+    $this->assertEquals('Steve Jobs', $joke->getAuthor());
+    $this->assertEquals('inspire', $joke->getCategory());
   }
 
   /**
    * Test API response without category uses default.
    *
-   * @covers ::getQuoteOfTheDay
+   * @covers ::getJokeOfTheDay
    */
-  public function testGetQuoteOfTheDayWithoutCategory(): void {
+  public function testGetJokeOfTheDayWithoutCategory(): void {
     $responseData = [
       'contents' => [
-        'quotes' => [
+        'jokes' => [
           [
-            'quote' => 'Test quote',
+            'joke' => 'Test joke',
             'author' => 'Test Author',
           ],
         ],
@@ -74,23 +74,23 @@ class QuotesApiClientTest extends UnitTestCase {
 
     $httpClient = $this->createMockHttpClient($responseData);
     $apiClient = new JokeApiClient($httpClient);
-    $quote = $apiClient->getQuoteOfTheDay();
+    $joke = $apiClient->getJokeOfTheDay();
 
-    $this->assertInstanceOf(Joke::class, $quote);
-    $this->assertEquals('inspire', $quote->getCategory());
+    $this->assertInstanceOf(Joke::class, $joke);
+    $this->assertEquals('inspire', $joke->getCategory());
   }
 
   /**
    * Test invalid API response returns null.
    *
-   * @covers ::getQuoteOfTheDay
+   * @covers ::getJokeOfTheDay
    * @covers ::isValidResponse
    */
-  public function testGetQuoteOfTheDayWithInvalidResponseReturnsNull(): void {
+  public function testGetJokeOfTheDayWithInvalidResponseReturnsNull(): void {
     // Invalid response structure (missing required fields).
     $responseData = [
       'contents' => [
-        'quotes' => [
+        'jokes' => [
           ['invalid' => 'data'],
         ],
       ],
@@ -98,53 +98,53 @@ class QuotesApiClientTest extends UnitTestCase {
 
     $httpClient = $this->createMockHttpClient($responseData);
     $apiClient = new JokeApiClient($httpClient);
-    $quote = $apiClient->getQuoteOfTheDay();
+    $joke = $apiClient->getJokeOfTheDay();
 
-    $this->assertNull($quote);
+    $this->assertNull($joke);
   }
 
   /**
    * Test empty response returns null.
    *
-   * @covers ::getQuoteOfTheDay
+   * @covers ::getJokeOfTheDay
    * @covers ::isValidResponse
    */
-  public function testGetQuoteOfTheDayWithEmptyResponseReturnsNull(): void {
+  public function testGetJokeOfTheDayWithEmptyResponseReturnsNull(): void {
     $httpClient = $this->createMockHttpClient([]);
     $apiClient = new JokeApiClient($httpClient);
-    $quote = $apiClient->getQuoteOfTheDay();
+    $joke = $apiClient->getJokeOfTheDay();
 
-    $this->assertNull($quote);
+    $this->assertNull($joke);
   }
 
   /**
    * Test API request exception returns null.
    *
-   * @covers ::getQuoteOfTheDay
+   * @covers ::getJokeOfTheDay
    */
-  public function testGetQuoteOfTheDayWithExceptionReturnsNull(): void {
+  public function testGetJokeOfTheDayWithExceptionReturnsNull(): void {
     // Create mock HTTP client that throws exception.
     $httpClient = $this->createMock(ClientInterface::class);
     $httpClient->method('request')
       ->willThrowException($this->createMock(RequestException::class));
 
     $apiClient = new JokeApiClient($httpClient);
-    $quote = $apiClient->getQuoteOfTheDay();
+    $joke = $apiClient->getJokeOfTheDay();
 
-    $this->assertNull($quote);
+    $this->assertNull($joke);
   }
 
   /**
-   * Test response with empty quote text returns null.
+   * Test response with empty joke text returns null.
    *
-   * @covers ::getQuoteOfTheDay
+   * @covers ::getJokeOfTheDay
    */
-  public function testGetQuoteOfTheDayWithEmptyQuoteTextReturnsNull(): void {
+  public function testGetJokeOfTheDayWithEmptyJokeTextReturnsNull(): void {
     $responseData = [
       'contents' => [
-        'quotes' => [
+        'jokes' => [
           [
-            'quote' => '',
+            'joke' => '',
             'author' => 'Someone',
             'category' => 'inspire',
           ],
@@ -154,10 +154,10 @@ class QuotesApiClientTest extends UnitTestCase {
 
     $httpClient = $this->createMockHttpClient($responseData);
     $apiClient = new JokeApiClient($httpClient);
-    $quote = $apiClient->getQuoteOfTheDay();
+    $joke = $apiClient->getJokeOfTheDay();
 
-    // Should return null because Quote constructor validates non-empty.
-    $this->assertNull($quote);
+    // Should return null because Joke constructor validates non-empty.
+    $this->assertNull($joke);
   }
 
   /**

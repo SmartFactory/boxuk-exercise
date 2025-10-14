@@ -2,21 +2,21 @@
 
 /**
  * @file
- * BoxUK Quotes module file.
+ * BoxUK Jokes module file.
  */
 
 /**
  * Implements hook_theme().
  */
-function boxuk_quotes_theme(): array {
+function boxuk_jokes_theme(): array {
   return [
-    'quote_of_the_day' => [
+    'joke_of_the_day' => [
       'variables' => [
-        'quote' => NULL,
+        'joke' => NULL,
         'author' => NULL,
         'category' => NULL,
       ],
-      'template' => 'quote-of-the-day',
+      'template' => 'joke-of-the-day',
     ],
   ];
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Drupal\boxuk_quotes;
+namespace Drupal\boxuk_jokes;
 
-use Drupal\boxuk_quotes\ValueObject\Joke;
+use Drupal\boxuk_jokes\ValueObject\Joke;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 
@@ -21,7 +21,7 @@ final class JokeApiClient {
   private const API_ENDPOINT = 'https://icanhazdadjoke.com/';
 
   /**
-   * Constructs a QuotesApiClient.
+   * Constructs a JokesApiClient.
    *
    * @param \GuzzleHttp\ClientInterface $httpClient
    *   The HTTP client service.
@@ -33,15 +33,15 @@ final class JokeApiClient {
   /**
    * Fetches a random joke from the API.
    *
-   * @return \Drupal\boxuk_quotes\ValueObject\Joke|null
-   *   The Quote value object containing the joke, NULL on error.
+   * @return \Drupal\boxuk_jokes\ValueObject\Joke|null
+   *   The Joke value object containing the joke, NULL on error.
    */
   public function getJokeOfTheDay(): ?Joke {
     try {
       $response = $this->httpClient->request('GET', self::API_ENDPOINT, [
         'headers' => [
           'Accept' => 'application/json',
-          'User-Agent' => 'Drupal BoxUK Quotes Module (https://github.com/boxuk)',
+          'User-Agent' => 'Drupal BoxUK Jokes Module (https://github.com/boxuk)',
         ],
         'timeout' => 10,
         'connect_timeout' => 5,
@@ -66,8 +66,8 @@ final class JokeApiClient {
       return NULL;
     }
     catch (\InvalidArgumentException $e) {
-      // Quote value object validation failed.
-      // TODO: Add error logging for invalid quote data.
+      // Joke value object validation failed.
+      // TODO: Add error logging for invalid joke data.
       return NULL;
     }
   }

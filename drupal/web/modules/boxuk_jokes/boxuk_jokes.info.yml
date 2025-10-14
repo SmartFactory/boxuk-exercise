@@ -1,0 +1,5 @@
+name: 'BoxUK Jokes'
+type: module
+description: ''
+package: 'Custom'
+core_version_requirement: ^10

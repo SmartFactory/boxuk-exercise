@@ -1,0 +1,5 @@
+joke-of-the-day:
+  version: 1.x
+  css:
+    component:
+      css/joke-of-the-day.css: {}

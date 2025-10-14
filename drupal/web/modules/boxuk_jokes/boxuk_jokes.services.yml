@@ -1,0 +1,4 @@
+services:
+  boxuk_jokes.api_client:
+    class: Drupal\boxuk_jokes\JokeApiClient
+    arguments: ['@http_client']

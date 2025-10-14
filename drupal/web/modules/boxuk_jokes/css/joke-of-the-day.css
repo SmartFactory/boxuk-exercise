@@ -1,0 +1,100 @@
+/**
+ * @file
+ * Styling for the Joke of the Day component.
+ *
+ * Uses Olivero theme's design system with CSS variables for consistency.
+ */
+
+.joke-of-the-day {
+  position: relative;
+  margin-block: var(--sp2, 36px);
+  padding: var(--sp1-5, 27px);
+  color: var(--color-text-neutral-loud, #1e1e1e);
+  background-color: var(--color--gray-100, #f7f7f7);
+  border: 1px solid var(--color--gray-95, #ececec);
+  border-radius: 2px;
+  border-left: solid 4px var(--color--primary-50, #0076a8);
+}
+
+/* Block format (default) - full width with generous padding */
+.joke-of-the-day--block {
+  display: block;
+}
+
+/* Inline format - compact for sidebar or narrow regions */
+.joke-of-the-day--inline {
+  display: inline-block;
+  padding: var(--sp1, 18px);
+  font-size: var(--font-size-s, 14px);
+}
+
+/* Heading styling */
+.joke-of-the-day__heading {
+  margin-block: 0 var(--sp1, 18px);
+  color: var(--color-text-primary-medium, #005a87);
+  font-size: var(--font-size-l, 18px);
+  font-weight: bold;
+  line-height: var(--line-height-base, 27px);
+  letter-spacing: 0.02em;
+}
+
+/* Joke text styling */
+.joke-of-the-day__text {
+  margin-block: 0 var(--sp1, 18px);
+  color: var(--color-text-neutral-medium, #333);
+  font-size: var(--font-size-base, 16px);
+  line-height: var(--line-height-base, 27px);
+  font-style: italic;
+}
+
+/* Footer styling */
+.joke-of-the-day__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp0-5, 9px);
+  margin-block-start: var(--sp1, 18px);
+  padding-block-start: var(--sp0-75, 13.5px);
+  border-top: 1px solid var(--color--gray-95, #ececec);
+  color: var(--color-text-neutral-soft, #6e6e6e);
+  font-size: var(--font-size-s, 14px);
+}
+
+/* Source citation */
+.joke-of-the-day__source {
+  font-style: normal;
+  color: var(--color-text-neutral-soft, #6e6e6e);
+}
+
+/* Category badge */
+.joke-of-the-day__category {
+  padding: var(--sp0-25, 4.5px) var(--sp0-5, 9px);
+  background-color: var(--color--primary-80, #d9ecf5);
+  border-radius: 2px;
+  color: var(--color-text-primary-loud, #004466);
+  font-size: var(--font-size-xs, 13px);
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (min-width: 62.5rem) {
+  .joke-of-the-day {
+    padding: var(--sp2, 36px);
+  }
+
+  .joke-of-the-day__heading {
+    font-size: var(--sp2, 36px);
+  }
+
+  .joke-of-the-day__text {
+    font-size: var(--font-size-l, 18px);
+  }
+}
+
+/* Print styles */
+@media print {
+  .joke-of-the-day {
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+}

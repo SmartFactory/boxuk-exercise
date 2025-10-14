@@ -1,24 +1,24 @@
 <?php
 
-namespace Drupal\boxuk_quotes\ValueObject;
+namespace Drupal\boxuk_jokes\ValueObject;
 
 /**
- * Immutable value object representing a quote.
+ * Immutable value object representing a joke.
  *
- * This value object encapsulates all the data related to a single quote,
+ * This value object encapsulates all the data related to a single joke,
  * ensuring type safety and immutability throughout the application.
  */
 final class Joke {
 
   /**
-   * Constructs a Quote value object.
+   * Constructs a Joke value object.
    *
    * @param string $joke
-   *   The quote text.
+   *   The joke text.
    * @param string $author
-   *   The author of the quote.
+   *   The author of the joke.
    * @param string $category
-   *   The category of the quote.
+   *   The category of the joke.
    */
   public function __construct(
     private readonly string $joke,
@@ -26,7 +26,7 @@ final class Joke {
     private readonly string $category,
   ) {
     if (empty($joke)) {
-      throw new \InvalidArgumentException('Quote text cannot be empty.');
+      throw new \InvalidArgumentException('Joke text cannot be empty.');
     }
     if (empty($author)) {
       throw new \InvalidArgumentException('Author cannot be empty.');
@@ -34,10 +34,10 @@ final class Joke {
   }
 
   /**
-   * Gets the quote text.
+   * Gets the joke text.
    *
    * @return string
-   *   The quote text.
+   *   The joke text.
    */
   public function getJoke(): string {
     return $this->joke;
@@ -64,14 +64,14 @@ final class Joke {
   }
 
   /**
-   * Converts the quote to an array for template compatibility.
+   * Converts the joke to an array for template compatibility.
    *
    * @return array
-   *   Array representation of the quote with keys: quote, author, category.
+   *   Array representation of the joke with keys: joke, author, category.
    */
   public function toArray(): array {
     return [
-      'quote' => $this->joke,
+      'joke' => $this->joke,
       'author' => $this->author,
       'category' => $this->category,
     ];

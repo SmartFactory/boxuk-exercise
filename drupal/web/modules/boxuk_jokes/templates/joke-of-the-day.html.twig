@@ -7,7 +7,7 @@
  * It's designed to be reusable across different layouts and contexts.
  *
  * Available variables:
- * - quote: (string) The joke text (required) - kept as 'quote' for compatibility
+ * - joke: (string) The joke text (required)
  * - author: (string) The source of the joke (required)
  * - category: (string) The joke category (optional)
  * - format: (string) Display format: 'block' or 'inline' (default: 'block')
@@ -18,16 +18,16 @@
  *
  * Basic usage (block format):
  * @code
- * {% include '@boxuk_quotes/joke-of-the-day.html.twig' with {
- *   'quote': 'Why don't scientists trust atoms? Because they make up everything!',
+ * {% include '@boxuk_jokes/joke-of-the-day.html.twig' with {
+ *   'joke': 'Why don't scientists trust atoms? Because they make up everything!',
  *   'author': 'icanhazdadjoke.com'
  * } %}
  * @endcode
  *
  * With category displayed:
  * @code
- * {% include '@boxuk_quotes/joke-of-the-day.html.twig' with {
- *   'quote': 'What do you call a fake noodle? An impasta!',
+ * {% include '@boxuk_jokes/joke-of-the-day.html.twig' with {
+ *   'joke': 'What do you call a fake noodle? An impasta!',
  *   'author': 'icanhazdadjoke.com',
  *   'category': 'humor',
  *   'show_category': true
@@ -38,11 +38,14 @@
  * @code
  * {% set style_data = node.getStyleData() %}
  * {% if style_data.jod %}
- *   {% include '@boxuk_quotes/joke-of-the-day.html.twig' with style_data.jod %}
+ *   {% include '@boxuk_jokes/joke-of-the-day.html.twig' with style_data.jod %}
  * {% endif %}
  * @endcode
  */
 #}
+
+{# Attach the library for styling #}
+{{ attach_library('boxuk_jokes/joke-of-the-day') }}
 
 {# Set default values #}
 {% set format = format|default('block') %}
@@ -61,16 +64,16 @@
 {% endif %}
 
 {# Only render if we have required data #}
-{% if quote and author %}
-  <div class="{{ css_classes|join(' ') }}" role="complementary" aria-label="Joke of the day">
+{% if joke and author %}
+  <aside class="{{ css_classes|join(' ') }}" role="complementary" aria-label="Joke of the day">
 
     {# Joke heading #}
-    <h3 class="joke-of-the-day__heading">Dad Joke of the Day</h3>
+    <h3 class="joke-of-the-day__heading">Joke of the Day</h3>
 
     {# Joke text #}
-    <p class="joke-of-the-day__text">
-      {{ quote }}
-    </p>
+    <div class="joke-of-the-day__text">
+      {{ joke }}
+    </div>
 
     {# Source attribution #}
     <footer class="joke-of-the-day__footer">
@@ -84,5 +87,5 @@
       {% endif %}
     </footer>
 
-  </div>
+  </aside>
 {% endif %}

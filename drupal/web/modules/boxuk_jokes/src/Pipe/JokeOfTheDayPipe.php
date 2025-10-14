@@ -1,9 +1,9 @@
 <?php
 
-namespace Drupal\boxuk_quotes\Pipe;
+namespace Drupal\boxuk_jokes\Pipe;
 
 use Drupal\boxuk_patterns\Pipe\BasePipe;
-use Drupal\boxuk_quotes\JokeApiClient;
+use Drupal\boxuk_jokes\JokeApiClient;
 
 /**
  * Pipe to fetch and inject joke of the day data into template context.
@@ -18,16 +18,16 @@ use Drupal\boxuk_quotes\JokeApiClient;
  * Example usage in template:
  * @code
  * {% if style_data.jod %}
- *   {% include '@boxuk_quotes/joke-of-the-day.html.twig' with style_data.jod %}
+ *   {% include '@boxuk_jokes/joke-of-the-day.html.twig' with style_data.jod %}
  * {% endif %}
  * @endcode
  */
 final class JokeOfTheDayPipe extends BasePipe {
 
   /**
-   * The quotes API client service.
+   * The jokes API client service.
    *
-   * @var \Drupal\boxuk_quotes\JokeApiClient
+   * @var \Drupal\boxuk_jokes\JokeApiClient
    */
   private JokeApiClient $apiClient;
 
@@ -37,7 +37,7 @@ final class JokeOfTheDayPipe extends BasePipe {
   public function __construct(object $object) {
     parent::__construct($object);
     // Retrieve the API client service from the container.
-    $this->apiClient = \Drupal::service('boxuk_quotes.api_client');
+    $this->apiClient = \Drupal::service('boxuk_jokes.api_client');
   }
 
   /**

@@ -12,7 +12,6 @@
  * - attributes: HTML attributes for the containing element.
  * - title_attributes: Same as attributes, except applied to the main title tag.
  * - content_attributes: Same as attributes, except applied to the main content tag.
- * - style_data: Custom data from the bundle class getStyleData() method.
  *
  * @see template_preprocess_node()
  */
@@ -47,10 +46,6 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {% if style_data.header %}
-      <div class="custom-header">{{ style_data.header }}</div>
-    {% endif %}
-
     {{ content }}
   </div>
 

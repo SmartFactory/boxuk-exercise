@@ -1,0 +1,88 @@
+{#
+/**
+ * @file
+ * Reusable component for displaying joke of the day.
+ *
+ * This component displays a random dad joke from the icanhazdadjoke.com API.
+ * It's designed to be reusable across different layouts and contexts.
+ *
+ * Available variables:
+ * - quote: (string) The joke text (required) - kept as 'quote' for compatibility
+ * - author: (string) The source of the joke (required)
+ * - category: (string) The joke category (optional)
+ * - format: (string) Display format: 'block' or 'inline' (default: 'block')
+ * - show_category: (bool) Whether to show category (default: false)
+ * - classes: (array) Additional CSS classes to apply
+ *
+ * Usage examples:
+ *
+ * Basic usage (block format):
+ * @code
+ * {% include '@boxuk_quotes/joke-of-the-day.html.twig' with {
+ *   'quote': 'Why don't scientists trust atoms? Because they make up everything!',
+ *   'author': 'icanhazdadjoke.com'
+ * } %}
+ * @endcode
+ *
+ * With category displayed:
+ * @code
+ * {% include '@boxuk_quotes/joke-of-the-day.html.twig' with {
+ *   'quote': 'What do you call a fake noodle? An impasta!',
+ *   'author': 'icanhazdadjoke.com',
+ *   'category': 'humor',
+ *   'show_category': true
+ * } %}
+ * @endcode
+ *
+ * Using with pipeline data:
+ * @code
+ * {% set style_data = node.getStyleData() %}
+ * {% if style_data.jod %}
+ *   {% include '@boxuk_quotes/joke-of-the-day.html.twig' with style_data.jod %}
+ * {% endif %}
+ * @endcode
+ */
+#}
+
+{# Set default values #}
+{% set format = format|default('block') %}
+{% set show_category = show_category is defined ? show_category : false %}
+{% set additional_classes = classes|default([]) %}
+
+{# Build CSS classes #}
+{% set css_classes = [
+  'joke-of-the-day',
+  'joke-of-the-day--' ~ format,
+] %}
+
+{# Add any additional classes passed in #}
+{% if additional_classes %}
+  {% set css_classes = css_classes|merge(additional_classes) %}
+{% endif %}
+
+{# Only render if we have required data #}
+{% if quote and author %}
+  <div class="{{ css_classes|join(' ') }}" role="complementary" aria-label="Joke of the day">
+
+    {# Joke heading #}
+    <h3 class="joke-of-the-day__heading">Dad Joke of the Day</h3>
+
+    {# Joke text #}
+    <p class="joke-of-the-day__text">
+      {{ quote }}
+    </p>
+
+    {# Source attribution #}
+    <footer class="joke-of-the-day__footer">
+      <cite class="joke-of-the-day__source">Source: {{ author }}</cite>
+
+      {# Category (optional) #}
+      {% if show_category and category %}
+        <span class="joke-of-the-day__category" aria-label="Category">
+          ({{ category }})
+        </span>
+      {% endif %}
+    </footer>
+
+  </div>
+{% endif %}

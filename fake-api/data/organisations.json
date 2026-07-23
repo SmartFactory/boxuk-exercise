@@ -1,0 +1,940 @@
+{
+  "RC482913": {
+    "org_id": "RC482913",
+    "name": "Harlech Systems Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2011-03-28",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "4 Dunraven Place",
+      "line2": null,
+      "town": "Bridgend",
+      "postcode": "CF31 1JD",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "62012",
+      "62020"
+    ],
+    "employee_band": "50-99",
+    "last_updated": "2026-05-14T09:12:44Z",
+    "officers": [
+      {
+        "officer_id": "off_2291",
+        "name": "GRIFFITHS, Eleri Mai",
+        "role": "director",
+        "appointed_on": "2011-03-28",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_5106",
+        "name": "PRICE, Owen",
+        "role": "secretary",
+        "appointed_on": "2015-11-02",
+        "resigned_on": "2023-06-30"
+      }
+    ]
+  },
+  "RC115637": {
+    "org_id": "RC115637",
+    "name": "Cambrian Analytics Ltd",
+    "status": "dissolved",
+    "type": "private-limited",
+    "incorporated_on": "2020-02-02",
+    "dissolved_on": "2024-09-12",
+    "registered_address": {
+      "line1": "85 Mill Lane",
+      "line2": null,
+      "town": "Newport",
+      "postcode": "NP20 4JA",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "46390",
+      "49410"
+    ],
+    "employee_band": null,
+    "last_updated": "2026-07-12T05:23:22Z",
+    "officers": [
+      {
+        "officer_id": "off_1608",
+        "name": "PHILLIPS, Osian",
+        "role": "director",
+        "appointed_on": "2020-11-06",
+        "resigned_on": "2024-09-12"
+      },
+      {
+        "officer_id": "off_1667",
+        "name": "PRICE, Huw",
+        "role": "director",
+        "appointed_on": "2024-11-11",
+        "resigned_on": "2024-07-09"
+      }
+    ]
+  },
+  "RC900218": {
+    "org_id": "RC900218",
+    "name": "Taf Logistics Ltd",
+    "status": "dormant",
+    "type": "private-limited",
+    "incorporated_on": "2008-07-09",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "9 Mill Lane",
+      "line2": null,
+      "town": "Bridgend",
+      "postcode": "CF31 8DH",
+      "country": "GB"
+    },
+    "sic_codes": [],
+    "employee_band": null,
+    "last_updated": "2026-02-24T17:34:16Z",
+    "officers": [
+      {
+        "officer_id": "off_7926",
+        "name": "PHILLIPS, Aled",
+        "role": "director",
+        "appointed_on": "2019-05-17",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC734561": {
+    "org_id": "RC734561",
+    "name": "Snowdon Digital Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2018-09-20",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "26 Harbour Way",
+      "line2": null,
+      "town": "Wrexham",
+      "postcode": "LL11 9JE",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "58110"
+    ],
+    "employee_band": "100-249",
+    "last_updated": "2026-01-04T11:56:53Z",
+    "officers": [
+      {
+        "officer_id": "off_8011",
+        "name": "GRIFFITHS, Rhian",
+        "role": "director",
+        "appointed_on": "2019-10-09",
+        "resigned_on": "2015-07-24"
+      },
+      {
+        "officer_id": "off_8228",
+        "name": "GRIFFITHS, Seren",
+        "role": "director",
+        "appointed_on": "2012-10-19",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_8426",
+        "name": "LEWIS, Elin",
+        "role": "director",
+        "appointed_on": "2013-03-16",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_8475",
+        "name": "EDWARDS, Rhian",
+        "role": "director",
+        "appointed_on": "2019-10-14",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_8504",
+        "name": "LLOYD, Mari",
+        "role": "director",
+        "appointed_on": "2020-03-11",
+        "resigned_on": "2020-06-22"
+      },
+      {
+        "officer_id": "off_8623",
+        "name": "HUGHES, Megan",
+        "role": "director",
+        "appointed_on": "2020-02-11",
+        "resigned_on": "2021-09-02"
+      },
+      {
+        "officer_id": "off_8729",
+        "name": "GRIFFITHS, Iestyn",
+        "role": "director",
+        "appointed_on": "2008-09-27",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_8780",
+        "name": "VAUGHAN, Seren",
+        "role": "director",
+        "appointed_on": "2019-09-12",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_8977",
+        "name": "HUGHES, Emyr",
+        "role": "director",
+        "appointed_on": "2020-01-07",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_9092",
+        "name": "JONES, Eleri Mai",
+        "role": "director",
+        "appointed_on": "2009-12-16",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_9174",
+        "name": "PHILLIPS, Rhys",
+        "role": "director",
+        "appointed_on": "2012-09-01",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_9200",
+        "name": "JONES, Lowri",
+        "role": "secretary",
+        "appointed_on": "2012-04-27",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC770487": {
+    "org_id": "RC770487",
+    "name": "Preseli Foods Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2010-11-21",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "48 Quay Parade",
+      "line2": "Floor 2",
+      "town": "Wrexham",
+      "postcode": "LL11 2BB",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "58110"
+    ],
+    "employee_band": "1-9",
+    "last_updated": "2026-05-18T07:37:14Z",
+    "officers": [
+      {
+        "officer_id": "off_2396",
+        "name": "LEWIS, Huw",
+        "role": "director",
+        "appointed_on": "2011-06-03",
+        "resigned_on": "2021-01-08"
+      }
+    ]
+  },
+  "RC216739": {
+    "org_id": "RC216739",
+    "name": "Menai Marine Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2019-08-07",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "70 Harbour Way",
+      "line2": null,
+      "town": "Wrexham",
+      "postcode": "LL11 8JD",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "63110"
+    ],
+    "employee_band": "1-9",
+    "last_updated": "2026-06-14T11:27:26Z",
+    "officers": [
+      {
+        "officer_id": "off_2502",
+        "name": "JONES, Huw",
+        "role": "director",
+        "appointed_on": "2019-12-11",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_2551",
+        "name": "DAVIES, Bryn",
+        "role": "director",
+        "appointed_on": "2022-05-15",
+        "resigned_on": "2024-08-05"
+      },
+      {
+        "officer_id": "off_2760",
+        "name": "PRICE, Elin",
+        "role": "director",
+        "appointed_on": "2022-09-04",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_2786",
+        "name": "LLOYD, Aled",
+        "role": "secretary",
+        "appointed_on": "2019-04-06",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC126225": {
+    "org_id": "RC126225",
+    "name": "Brecon Renewables Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2004-07-02",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "22 Chapel Court",
+      "line2": "Floor 2",
+      "town": "Carmarthen",
+      "postcode": "SA31 5JJ",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "10710",
+      "35110"
+    ],
+    "employee_band": null,
+    "last_updated": "2026-06-26T17:42:45Z",
+    "officers": [
+      {
+        "officer_id": "off_2804",
+        "name": "PRICE, Owen",
+        "role": "director",
+        "appointed_on": "2021-12-11",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_2942",
+        "name": "LEWIS, Rhian",
+        "role": "director",
+        "appointed_on": "2020-03-02",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_3097",
+        "name": "DAVIES, Angharad",
+        "role": "director",
+        "appointed_on": "2006-02-22",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_3110",
+        "name": "LLOYD, Iestyn",
+        "role": "director",
+        "appointed_on": "2023-10-03",
+        "resigned_on": "2023-04-19"
+      }
+    ]
+  },
+  "RC877572": {
+    "org_id": "RC877572",
+    "name": "Teifi Textiles Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2016-09-11",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "120 Station Road",
+      "line2": "Unit 4",
+      "town": "Llanelli",
+      "postcode": "SA15 4CD",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "35110"
+    ],
+    "employee_band": "100-249",
+    "last_updated": "2026-03-25T02:00:29Z",
+    "officers": [
+      {
+        "officer_id": "off_3185",
+        "name": "PHILLIPS, Mari",
+        "role": "director",
+        "appointed_on": "2021-03-15",
+        "resigned_on": "2022-02-08"
+      },
+      {
+        "officer_id": "off_3190",
+        "name": "PHILLIPS, Ifan",
+        "role": "director",
+        "appointed_on": "2024-11-27",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_3227",
+        "name": "JONES, Osian",
+        "role": "director",
+        "appointed_on": "2017-05-04",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_3302",
+        "name": "OWEN, Bethan",
+        "role": "director",
+        "appointed_on": "2020-10-07",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_3434",
+        "name": "PRICE, Rhian",
+        "role": "director",
+        "appointed_on": "2020-08-09",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC388389": {
+    "org_id": "RC388389",
+    "name": "Rhondda Robotics Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2006-01-01",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "43 Harbour Way",
+      "line2": null,
+      "town": "Bangor",
+      "postcode": "LL57 8EH",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "62012",
+      "62020"
+    ],
+    "employee_band": "1-9",
+    "last_updated": "2026-06-05T17:02:53Z",
+    "officers": [
+      {
+        "officer_id": "off_3528",
+        "name": "DAVIES, Iestyn",
+        "role": "director",
+        "appointed_on": "2007-04-22",
+        "resigned_on": "2016-06-26"
+      },
+      {
+        "officer_id": "off_3591",
+        "name": "THOMAS, Catrin",
+        "role": "secretary",
+        "appointed_on": "2010-03-26",
+        "resigned_on": "2024-07-20"
+      },
+      {
+        "officer_id": "off_3782",
+        "name": "LLOYD, Dylan",
+        "role": "director",
+        "appointed_on": "2011-06-26",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC356787": {
+    "org_id": "RC356787",
+    "name": "Gower Consulting LLP",
+    "status": "active",
+    "type": "llp",
+    "incorporated_on": "2006-03-26",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "90 Castle Street",
+      "line2": null,
+      "town": "Newport",
+      "postcode": "NP20 8BB",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "70229",
+      "72110"
+    ],
+    "employee_band": "10-49",
+    "last_updated": "2026-02-01T21:12:25Z",
+    "officers": [
+      {
+        "officer_id": "off_3949",
+        "name": "PHILLIPS, Megan",
+        "role": "director",
+        "appointed_on": "2017-09-13",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_4018",
+        "name": "HUGHES, Owen",
+        "role": "director",
+        "appointed_on": "2009-03-19",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_4132",
+        "name": "JONES, Angharad",
+        "role": "director",
+        "appointed_on": "2016-10-17",
+        "resigned_on": "2020-06-24"
+      }
+    ]
+  },
+  "RC334053": {
+    "org_id": "RC334053",
+    "name": "Clwyd Construction Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2004-05-02",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "91 Chapel Court",
+      "line2": null,
+      "town": "Llanelli",
+      "postcode": "SA15 6DA",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "35110",
+      "58110",
+      "71121"
+    ],
+    "employee_band": null,
+    "last_updated": "2026-07-04T23:57:19Z",
+    "officers": [
+      {
+        "officer_id": "off_4292",
+        "name": "JENKINS, Emyr",
+        "role": "director",
+        "appointed_on": "2009-10-10",
+        "resigned_on": "2018-11-13"
+      },
+      {
+        "officer_id": "off_4368",
+        "name": "BOWEN, Gwilym",
+        "role": "director",
+        "appointed_on": "2013-04-14",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_4484",
+        "name": "ROBERTS, Ffion",
+        "role": "secretary",
+        "appointed_on": "2018-08-22",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_4655",
+        "name": "LEWIS, Iestyn",
+        "role": "secretary",
+        "appointed_on": "2009-02-10",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_4681",
+        "name": "MORGAN, Huw",
+        "role": "director",
+        "appointed_on": "2014-04-22",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC246316": {
+    "org_id": "RC246316",
+    "name": "Ogmore Media Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2002-01-02",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "32 Quay Parade",
+      "line2": "Floor 2",
+      "town": "Newport",
+      "postcode": "NP20 7HE",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "25110"
+    ],
+    "employee_band": "100-249",
+    "last_updated": "2026-04-08T04:41:44Z",
+    "officers": [
+      {
+        "officer_id": "off_4883",
+        "name": "THOMAS, Dylan",
+        "role": "director",
+        "appointed_on": "2005-07-08",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC872246": {
+    "org_id": "RC872246",
+    "name": "Llyn Software Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2012-01-18",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "32 Castle Street",
+      "line2": null,
+      "town": "Merthyr Tydfil",
+      "postcode": "CF47 8HE",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "25110",
+      "46390",
+      "58110"
+    ],
+    "employee_band": "250-499",
+    "last_updated": "2026-07-24T16:27:53Z",
+    "officers": [
+      {
+        "officer_id": "off_4956",
+        "name": "DAVIES, Sioned",
+        "role": "director",
+        "appointed_on": "2022-09-16",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_5032",
+        "name": "OWEN, Megan",
+        "role": "secretary",
+        "appointed_on": "2023-04-09",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_5070",
+        "name": "JENKINS, Mari",
+        "role": "director",
+        "appointed_on": "2013-03-08",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_5157",
+        "name": "LLOYD, Owen",
+        "role": "director",
+        "appointed_on": "2018-09-15",
+        "resigned_on": "2016-02-14"
+      },
+      {
+        "officer_id": "off_5338",
+        "name": "BOWEN, Angharad",
+        "role": "secretary",
+        "appointed_on": "2021-01-28",
+        "resigned_on": "2019-07-25"
+      }
+    ]
+  },
+  "RC207473": {
+    "org_id": "RC207473",
+    "name": "Elan Water Services Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "1998-06-10",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "97 Chapel Court",
+      "line2": null,
+      "town": "Carmarthen",
+      "postcode": "SA31 8BC",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "28990",
+      "62012"
+    ],
+    "employee_band": "100-249",
+    "last_updated": "2026-03-22T21:51:25Z",
+    "officers": [
+      {
+        "officer_id": "off_5477",
+        "name": "BOWEN, Nia",
+        "role": "director",
+        "appointed_on": "2017-01-13",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_5644",
+        "name": "PARRY, Gareth",
+        "role": "director",
+        "appointed_on": "2000-07-05",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC809570": {
+    "org_id": "RC809570",
+    "name": "Berwyn Biotech Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2006-07-11",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "28 Quay Parade",
+      "line2": "Unit 6",
+      "town": "Bridgend",
+      "postcode": "CF31 7CJ",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "13920",
+      "49410"
+    ],
+    "employee_band": "1-9",
+    "last_updated": "2026-04-01T23:34:03Z",
+    "officers": [
+      {
+        "officer_id": "off_5840",
+        "name": "ROBERTS, Alys",
+        "role": "director",
+        "appointed_on": "2007-01-08",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_6014",
+        "name": "ROBERTS, Lowri",
+        "role": "director",
+        "appointed_on": "2021-02-19",
+        "resigned_on": "2011-04-05"
+      },
+      {
+        "officer_id": "off_6059",
+        "name": "JONES, Seren",
+        "role": "director",
+        "appointed_on": "2017-10-20",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC876646": {
+    "org_id": "RC876646",
+    "name": "Sirhowy Steel Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2007-02-19",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "4 Station Road",
+      "line2": "Floor 2",
+      "town": "Swansea",
+      "postcode": "SA1 4AE",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "46390",
+      "62020",
+      "72110"
+    ],
+    "employee_band": "50-99",
+    "last_updated": "2026-07-22T19:51:07Z",
+    "officers": [
+      {
+        "officer_id": "off_6065",
+        "name": "EDWARDS, Dafydd",
+        "role": "director",
+        "appointed_on": "2017-07-27",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_6230",
+        "name": "WILLIAMS, Rhys",
+        "role": "director",
+        "appointed_on": "2018-08-23",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_6431",
+        "name": "LLOYD, Alys",
+        "role": "secretary",
+        "appointed_on": "2024-08-15",
+        "resigned_on": "2024-11-09"
+      },
+      {
+        "officer_id": "off_6516",
+        "name": "EVANS, Sioned",
+        "role": "secretary",
+        "appointed_on": "2015-04-27",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_6711",
+        "name": "VAUGHAN, Iestyn",
+        "role": "secretary",
+        "appointed_on": "2014-08-19",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC671858": {
+    "org_id": "RC671858",
+    "name": "Dyfi Publishing Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2008-01-16",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "109 High Street",
+      "line2": "Floor 2",
+      "town": "Bangor",
+      "postcode": "LL57 4CJ",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "58110",
+      "70229"
+    ],
+    "employee_band": "250-499",
+    "last_updated": "2026-06-09T17:00:33Z",
+    "officers": [
+      {
+        "officer_id": "off_6856",
+        "name": "EDWARDS, Elin",
+        "role": "director",
+        "appointed_on": "2023-04-23",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_7061",
+        "name": "MORGAN, Huw",
+        "role": "director",
+        "appointed_on": "2022-01-03",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC191161": {
+    "org_id": "RC191161",
+    "name": "Caldey Coffee Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2020-04-10",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "85 Foundry Row",
+      "line2": "Floor 2",
+      "town": "Bangor",
+      "postcode": "LL57 9EC",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "58110",
+      "71121"
+    ],
+    "employee_band": null,
+    "last_updated": "2026-04-09T09:16:14Z",
+    "officers": [
+      {
+        "officer_id": "off_7094",
+        "name": "THOMAS, Bethan",
+        "role": "director",
+        "appointed_on": "2022-12-18",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC719176": {
+    "org_id": "RC719176",
+    "name": "Tywi Transport Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2021-08-09",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "93 Foundry Row",
+      "line2": "Unit 9",
+      "town": "Newport",
+      "postcode": "NP20 2JB",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "46390",
+      "71121"
+    ],
+    "employee_band": "10-49",
+    "last_updated": "2026-03-01T22:34:08Z",
+    "officers": [
+      {
+        "officer_id": "off_7123",
+        "name": "MORGAN, Aled",
+        "role": "director",
+        "appointed_on": "2024-01-19",
+        "resigned_on": "2023-11-28"
+      },
+      {
+        "officer_id": "off_7173",
+        "name": "EDWARDS, Dafydd",
+        "role": "director",
+        "appointed_on": "2023-01-09",
+        "resigned_on": null
+      },
+      {
+        "officer_id": "off_7301",
+        "name": "PRICE, Carys",
+        "role": "director",
+        "appointed_on": "2024-02-19",
+        "resigned_on": null
+      }
+    ]
+  },
+  "RC542417": {
+    "org_id": "RC542417",
+    "name": "Usk Energy Ltd",
+    "status": "active",
+    "type": "private-limited",
+    "incorporated_on": "2016-05-03",
+    "dissolved_on": null,
+    "registered_address": {
+      "line1": "32 Castle Street",
+      "line2": "Floor 2",
+      "town": "Swansea",
+      "postcode": "SA1 4JE",
+      "country": "GB"
+    },
+    "sic_codes": [
+      "28990",
+      "50200"
+    ],
+    "employee_band": "100-249",
+    "last_updated": "2026-03-28T18:27:19Z",
+    "officers": [
+      {
+        "officer_id": "off_7344",
+        "name": "PHILLIPS, Rhian",
+        "role": "director",
+        "appointed_on": "2017-04-06",
+        "resigned_on": "2020-05-22"
+      },
+      {
+        "officer_id": "off_7421",
+        "name": "MORGAN, Mari",
+        "role": "secretary",
+        "appointed_on": "2023-01-08",
+        "resigned_on": "2023-08-23"
+      },
+      {
+        "officer_id": "off_7491",
+        "name": "ROBERTS, Rhys",
+        "role": "secretary",
+        "appointed_on": "2019-11-19",
+        "resigned_on": "2024-02-22"
+      },
+      {
+        "officer_id": "off_7705",
+        "name": "PRICE, Gareth",
+        "role": "director",
+        "appointed_on": "2020-03-03",
+        "resigned_on": "2020-11-05"
+      },
+      {
+        "officer_id": "off_7820",
+        "name": "MORGAN, Mari",
+        "role": "director",
+        "appointed_on": "2020-02-15",
+        "resigned_on": null
+      }
+    ]
+  }
+}

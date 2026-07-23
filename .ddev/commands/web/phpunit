@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run the PHPUnit test suite
+## Usage: phpunit [args]
+## Example: "ddev phpunit" or "ddev phpunit --filter SmokeTest"
+
+vendor/bin/phpunit "$@"

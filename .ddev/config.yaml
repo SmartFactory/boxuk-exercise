@@ -1,0 +1,26 @@
+name: org-enrichment-test
+type: drupal11
+docroot: web
+php_version: "8.3"
+webserver_type: nginx-fpm
+composer_version: "2"
+database:
+  type: mariadb
+  version: "10.11"
+
+# Runs the Kestrel Data API stand-in inside the web container.
+# Inside the container it's reachable at http://localhost:8000 (so code and
+# tests running via `ddev exec` / `ddev phpunit` use the base URL from the
+# API docs as-is). From your host machine it's exposed at:
+#   http://org-enrichment-test.ddev.site:8080
+#   https://org-enrichment-test.ddev.site:8443
+web_extra_daemons:
+  - name: kestrel-api
+    command: "php -S 0.0.0.0:8000 fake-api/server.php"
+    directory: /var/www/html
+
+web_extra_exposed_ports:
+  - name: kestrel-api
+    container_port: 8000
+    http_port: 8080
+    https_port: 8443

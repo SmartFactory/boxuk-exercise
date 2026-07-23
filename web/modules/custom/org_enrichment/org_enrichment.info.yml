@@ -1,0 +1,5 @@
+name: Organisation Enrichment
+type: module
+description: 'Enriches organisation records via the Kestrel Data Organisation Profile API.'
+package: Custom
+core_version_requirement: ^11

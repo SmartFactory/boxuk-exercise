@@ -1,1 +1,34 @@
-.idea
+# Dependencies and generated files.
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+composer.lock
+
+# Site-local files.
+/web/sites/*/files/
+/web/sites/*/private/
+/web/sites/*/settings.php
+/web/sites/*/settings.*.php
+
+# Drupal scaffold files.
+/web/.htaccess
+/web/autoload.php
+/web/index.php
+/web/robots.txt
+/web/update.php
+/web/web.config
+/web/sites/default/default.settings.php
+/web/sites/default/default.services.yml
+/web/sites/development.services.yml
+/web/sites/example.settings.local.php
+/web/sites/example.sites.php
+/web/INSTALL.txt
+/web/README.md
+
+# Tooling.
+/.phpunit.cache/
+phpunit.xml
+phpstan.neon

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         bootstrap="web/core/tests/bootstrap.php"
+         colors="true"
+         cacheDirectory=".phpunit.cache"
+         cacheResult="false"
+         failOnWarning="true"
+         displayDetailsOnTestsThatTriggerWarnings="true">
+  <php>
+    <ini name="error_reporting" value="32767"/>
+    <!-- Only needed if you write Kernel/Functional tests. Values below are
+         correct for the bundled DDEV environment. -->
+    <env name="SIMPLETEST_BASE_URL" value="http://localhost"/>
+    <env name="SIMPLETEST_DB" value="mysql://db:db@db/db"/>
+    <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/tmp"/>
+  </php>
+  <testsuites>
+    <testsuite name="unit">
+      <directory>web/modules/custom/org_enrichment/tests/src/Unit</directory>
+    </testsuite>
+    <testsuite name="kernel">
+      <directory>web/modules/custom/org_enrichment/tests/src/Kernel</directory>
+    </testsuite>
+  </testsuites>
+  <source>
+    <include>
+      <directory>web/modules/custom/org_enrichment/src</directory>
+    </include>
+  </source>
+</phpunit>

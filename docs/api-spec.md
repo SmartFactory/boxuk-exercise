@@ -31,6 +31,7 @@ GET /v1/organisations/{orgId}
 {
   "org_id": "RC482913",
   "name": "Harlech Systems Ltd",
+  "description": "Fixture description for organisation RC482913",
   "status": "active",
   "type": "private-limited",
   "incorporated_on": "2011-03-28",
@@ -66,6 +67,7 @@ GET /v1/organisations/{orgId}/officers
     {
       "officer_id": "off_2291",
       "name": "GRIFFITHS, Eleri Mai",
+      "description": "Fixture description for officer off_2291",
       "role": "director",
       "appointed_on": "2011-03-28",
       "resigned_on": null
@@ -73,6 +75,7 @@ GET /v1/organisations/{orgId}/officers
     {
       "officer_id": "off_5106",
       "name": "PRICE, Owen",
+      "description": "Fixture description for officer off_5106",
       "role": "secretary",
       "appointed_on": "2015-11-02",
       "resigned_on": "2023-06-30"
@@ -82,6 +85,10 @@ GET /v1/organisations/{orgId}/officers
 ```
 
 `role` is one of `director`, `secretary`, `llp-member`. Officer names are returned in registry format (`SURNAME, Forenames`).
+
+The `description` fields are fixture markers rather than registry data. They
+exist so local consumers can change a value and observe provider and cache
+behaviour during development.
 
 ## Errors
 

@@ -2,6 +2,7 @@
   "RC482913": {
     "org_id": "RC482913",
     "name": "Harlech Systems Ltd",
+    "description": "Fixture description for organisation RC482913",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2011-03-28",
@@ -23,6 +24,7 @@
       {
         "officer_id": "off_2291",
         "name": "GRIFFITHS, Eleri Mai",
+        "description": "Fixture description for officer off_2291",
         "role": "director",
         "appointed_on": "2011-03-28",
         "resigned_on": null
@@ -30,6 +32,7 @@
       {
         "officer_id": "off_5106",
         "name": "PRICE, Owen",
+        "description": "Fixture description for officer off_5106",
         "role": "secretary",
         "appointed_on": "2015-11-02",
         "resigned_on": "2023-06-30"
@@ -39,6 +42,7 @@
   "RC115637": {
     "org_id": "RC115637",
     "name": "Cambrian Analytics Ltd",
+    "description": "Fixture description for organisation RC115637",
     "status": "dissolved",
     "type": "private-limited",
     "incorporated_on": "2020-02-02",
@@ -60,6 +64,7 @@
       {
         "officer_id": "off_1608",
         "name": "PHILLIPS, Osian",
+        "description": "Fixture description for officer off_1608",
         "role": "director",
         "appointed_on": "2020-11-06",
         "resigned_on": "2024-09-12"
@@ -67,6 +72,7 @@
       {
         "officer_id": "off_1667",
         "name": "PRICE, Huw",
+        "description": "Fixture description for officer off_1667",
         "role": "director",
         "appointed_on": "2024-11-11",
         "resigned_on": "2024-07-09"
@@ -76,6 +82,7 @@
   "RC900218": {
     "org_id": "RC900218",
     "name": "Taf Logistics Ltd",
+    "description": "Fixture description for organisation RC900218",
     "status": "dormant",
     "type": "private-limited",
     "incorporated_on": "2008-07-09",
@@ -94,6 +101,7 @@
       {
         "officer_id": "off_7926",
         "name": "PHILLIPS, Aled",
+        "description": "Fixture description for officer off_7926",
         "role": "director",
         "appointed_on": "2019-05-17",
         "resigned_on": null
@@ -103,6 +111,7 @@
   "RC734561": {
     "org_id": "RC734561",
     "name": "Snowdon Digital Ltd",
+    "description": "Fixture description for organisation RC734561",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2018-09-20",
@@ -123,6 +132,7 @@
       {
         "officer_id": "off_8011",
         "name": "GRIFFITHS, Rhian",
+        "description": "Fixture description for officer off_8011",
         "role": "director",
         "appointed_on": "2019-10-09",
         "resigned_on": "2015-07-24"
@@ -130,6 +140,7 @@
       {
         "officer_id": "off_8228",
         "name": "GRIFFITHS, Seren",
+        "description": "Fixture description for officer off_8228",
         "role": "director",
         "appointed_on": "2012-10-19",
         "resigned_on": null
@@ -137,6 +148,7 @@
       {
         "officer_id": "off_8426",
         "name": "LEWIS, Elin",
+        "description": "Fixture description for officer off_8426",
         "role": "director",
         "appointed_on": "2013-03-16",
         "resigned_on": null
@@ -144,6 +156,7 @@
       {
         "officer_id": "off_8475",
         "name": "EDWARDS, Rhian",
+        "description": "Fixture description for officer off_8475",
         "role": "director",
         "appointed_on": "2019-10-14",
         "resigned_on": null
@@ -151,6 +164,7 @@
       {
         "officer_id": "off_8504",
         "name": "LLOYD, Mari",
+        "description": "Fixture description for officer off_8504",
         "role": "director",
         "appointed_on": "2020-03-11",
         "resigned_on": "2020-06-22"
@@ -158,6 +172,7 @@
       {
         "officer_id": "off_8623",
         "name": "HUGHES, Megan",
+        "description": "Fixture description for officer off_8623",
         "role": "director",
         "appointed_on": "2020-02-11",
         "resigned_on": "2021-09-02"
@@ -165,6 +180,7 @@
       {
         "officer_id": "off_8729",
         "name": "GRIFFITHS, Iestyn",
+        "description": "Fixture description for officer off_8729",
         "role": "director",
         "appointed_on": "2008-09-27",
         "resigned_on": null
@@ -172,6 +188,7 @@
       {
         "officer_id": "off_8780",
         "name": "VAUGHAN, Seren",
+        "description": "Fixture description for officer off_8780",
         "role": "director",
         "appointed_on": "2019-09-12",
         "resigned_on": null
@@ -179,6 +196,7 @@
       {
         "officer_id": "off_8977",
         "name": "HUGHES, Emyr",
+        "description": "Fixture description for officer off_8977",
         "role": "director",
         "appointed_on": "2020-01-07",
         "resigned_on": null
@@ -186,6 +204,7 @@
       {
         "officer_id": "off_9092",
         "name": "JONES, Eleri Mai",
+        "description": "Fixture description for officer off_9092",
         "role": "director",
         "appointed_on": "2009-12-16",
         "resigned_on": null
@@ -193,6 +212,7 @@
       {
         "officer_id": "off_9174",
         "name": "PHILLIPS, Rhys",
+        "description": "Fixture description for officer off_9174",
         "role": "director",
         "appointed_on": "2012-09-01",
         "resigned_on": null
@@ -200,6 +220,7 @@
       {
         "officer_id": "off_9200",
         "name": "JONES, Lowri",
+        "description": "Fixture description for officer off_9200",
         "role": "secretary",
         "appointed_on": "2012-04-27",
         "resigned_on": null
@@ -209,6 +230,7 @@
   "RC770487": {
     "org_id": "RC770487",
     "name": "Preseli Foods Ltd",
+    "description": "Fixture description for organisation RC770487",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2010-11-21",
@@ -229,6 +251,7 @@
       {
         "officer_id": "off_2396",
         "name": "LEWIS, Huw",
+        "description": "Fixture description for officer off_2396",
         "role": "director",
         "appointed_on": "2011-06-03",
         "resigned_on": "2021-01-08"
@@ -238,6 +261,7 @@
   "RC216739": {
     "org_id": "RC216739",
     "name": "Menai Marine Ltd",
+    "description": "Fixture description for organisation RC216739",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2019-08-07",
@@ -258,6 +282,7 @@
       {
         "officer_id": "off_2502",
         "name": "JONES, Huw",
+        "description": "Fixture description for officer off_2502",
         "role": "director",
         "appointed_on": "2019-12-11",
         "resigned_on": null
@@ -265,6 +290,7 @@
       {
         "officer_id": "off_2551",
         "name": "DAVIES, Bryn",
+        "description": "Fixture description for officer off_2551",
         "role": "director",
         "appointed_on": "2022-05-15",
         "resigned_on": "2024-08-05"
@@ -272,6 +298,7 @@
       {
         "officer_id": "off_2760",
         "name": "PRICE, Elin",
+        "description": "Fixture description for officer off_2760",
         "role": "director",
         "appointed_on": "2022-09-04",
         "resigned_on": null
@@ -279,6 +306,7 @@
       {
         "officer_id": "off_2786",
         "name": "LLOYD, Aled",
+        "description": "Fixture description for officer off_2786",
         "role": "secretary",
         "appointed_on": "2019-04-06",
         "resigned_on": null
@@ -288,6 +316,7 @@
   "RC126225": {
     "org_id": "RC126225",
     "name": "Brecon Renewables Ltd",
+    "description": "Fixture description for organisation RC126225",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2004-07-02",
@@ -309,6 +338,7 @@
       {
         "officer_id": "off_2804",
         "name": "PRICE, Owen",
+        "description": "Fixture description for officer off_2804",
         "role": "director",
         "appointed_on": "2021-12-11",
         "resigned_on": null
@@ -316,6 +346,7 @@
       {
         "officer_id": "off_2942",
         "name": "LEWIS, Rhian",
+        "description": "Fixture description for officer off_2942",
         "role": "director",
         "appointed_on": "2020-03-02",
         "resigned_on": null
@@ -323,6 +354,7 @@
       {
         "officer_id": "off_3097",
         "name": "DAVIES, Angharad",
+        "description": "Fixture description for officer off_3097",
         "role": "director",
         "appointed_on": "2006-02-22",
         "resigned_on": null
@@ -330,6 +362,7 @@
       {
         "officer_id": "off_3110",
         "name": "LLOYD, Iestyn",
+        "description": "Fixture description for officer off_3110",
         "role": "director",
         "appointed_on": "2023-10-03",
         "resigned_on": "2023-04-19"
@@ -339,6 +372,7 @@
   "RC877572": {
     "org_id": "RC877572",
     "name": "Teifi Textiles Ltd",
+    "description": "Fixture description for organisation RC877572",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2016-09-11",
@@ -359,6 +393,7 @@
       {
         "officer_id": "off_3185",
         "name": "PHILLIPS, Mari",
+        "description": "Fixture description for officer off_3185",
         "role": "director",
         "appointed_on": "2021-03-15",
         "resigned_on": "2022-02-08"
@@ -366,6 +401,7 @@
       {
         "officer_id": "off_3190",
         "name": "PHILLIPS, Ifan",
+        "description": "Fixture description for officer off_3190",
         "role": "director",
         "appointed_on": "2024-11-27",
         "resigned_on": null
@@ -373,6 +409,7 @@
       {
         "officer_id": "off_3227",
         "name": "JONES, Osian",
+        "description": "Fixture description for officer off_3227",
         "role": "director",
         "appointed_on": "2017-05-04",
         "resigned_on": null
@@ -380,6 +417,7 @@
       {
         "officer_id": "off_3302",
         "name": "OWEN, Bethan",
+        "description": "Fixture description for officer off_3302",
         "role": "director",
         "appointed_on": "2020-10-07",
         "resigned_on": null
@@ -387,6 +425,7 @@
       {
         "officer_id": "off_3434",
         "name": "PRICE, Rhian",
+        "description": "Fixture description for officer off_3434",
         "role": "director",
         "appointed_on": "2020-08-09",
         "resigned_on": null
@@ -396,6 +435,7 @@
   "RC388389": {
     "org_id": "RC388389",
     "name": "Rhondda Robotics Ltd",
+    "description": "Fixture description for organisation RC388389",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2006-01-01",
@@ -417,6 +457,7 @@
       {
         "officer_id": "off_3528",
         "name": "DAVIES, Iestyn",
+        "description": "Fixture description for officer off_3528",
         "role": "director",
         "appointed_on": "2007-04-22",
         "resigned_on": "2016-06-26"
@@ -424,6 +465,7 @@
       {
         "officer_id": "off_3591",
         "name": "THOMAS, Catrin",
+        "description": "Fixture description for officer off_3591",
         "role": "secretary",
         "appointed_on": "2010-03-26",
         "resigned_on": "2024-07-20"
@@ -431,6 +473,7 @@
       {
         "officer_id": "off_3782",
         "name": "LLOYD, Dylan",
+        "description": "Fixture description for officer off_3782",
         "role": "director",
         "appointed_on": "2011-06-26",
         "resigned_on": null
@@ -440,6 +483,7 @@
   "RC356787": {
     "org_id": "RC356787",
     "name": "Gower Consulting LLP",
+    "description": "Fixture description for organisation RC356787",
     "status": "active",
     "type": "llp",
     "incorporated_on": "2006-03-26",
@@ -461,6 +505,7 @@
       {
         "officer_id": "off_3949",
         "name": "PHILLIPS, Megan",
+        "description": "Fixture description for officer off_3949",
         "role": "director",
         "appointed_on": "2017-09-13",
         "resigned_on": null
@@ -468,6 +513,7 @@
       {
         "officer_id": "off_4018",
         "name": "HUGHES, Owen",
+        "description": "Fixture description for officer off_4018",
         "role": "director",
         "appointed_on": "2009-03-19",
         "resigned_on": null
@@ -475,6 +521,7 @@
       {
         "officer_id": "off_4132",
         "name": "JONES, Angharad",
+        "description": "Fixture description for officer off_4132",
         "role": "director",
         "appointed_on": "2016-10-17",
         "resigned_on": "2020-06-24"
@@ -484,6 +531,7 @@
   "RC334053": {
     "org_id": "RC334053",
     "name": "Clwyd Construction Ltd",
+    "description": "Fixture description for organisation RC334053",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2004-05-02",
@@ -506,6 +554,7 @@
       {
         "officer_id": "off_4292",
         "name": "JENKINS, Emyr",
+        "description": "Fixture description for officer off_4292",
         "role": "director",
         "appointed_on": "2009-10-10",
         "resigned_on": "2018-11-13"
@@ -513,6 +562,7 @@
       {
         "officer_id": "off_4368",
         "name": "BOWEN, Gwilym",
+        "description": "Fixture description for officer off_4368",
         "role": "director",
         "appointed_on": "2013-04-14",
         "resigned_on": null
@@ -520,6 +570,7 @@
       {
         "officer_id": "off_4484",
         "name": "ROBERTS, Ffion",
+        "description": "Fixture description for officer off_4484",
         "role": "secretary",
         "appointed_on": "2018-08-22",
         "resigned_on": null
@@ -527,6 +578,7 @@
       {
         "officer_id": "off_4655",
         "name": "LEWIS, Iestyn",
+        "description": "Fixture description for officer off_4655",
         "role": "secretary",
         "appointed_on": "2009-02-10",
         "resigned_on": null
@@ -534,6 +586,7 @@
       {
         "officer_id": "off_4681",
         "name": "MORGAN, Huw",
+        "description": "Fixture description for officer off_4681",
         "role": "director",
         "appointed_on": "2014-04-22",
         "resigned_on": null
@@ -543,6 +596,7 @@
   "RC246316": {
     "org_id": "RC246316",
     "name": "Ogmore Media Ltd",
+    "description": "Fixture description for organisation RC246316",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2002-01-02",
@@ -563,6 +617,7 @@
       {
         "officer_id": "off_4883",
         "name": "THOMAS, Dylan",
+        "description": "Fixture description for officer off_4883",
         "role": "director",
         "appointed_on": "2005-07-08",
         "resigned_on": null
@@ -572,6 +627,7 @@
   "RC872246": {
     "org_id": "RC872246",
     "name": "Llyn Software Ltd",
+    "description": "Fixture description for organisation RC872246",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2012-01-18",
@@ -594,6 +650,7 @@
       {
         "officer_id": "off_4956",
         "name": "DAVIES, Sioned",
+        "description": "Fixture description for officer off_4956",
         "role": "director",
         "appointed_on": "2022-09-16",
         "resigned_on": null
@@ -601,6 +658,7 @@
       {
         "officer_id": "off_5032",
         "name": "OWEN, Megan",
+        "description": "Fixture description for officer off_5032",
         "role": "secretary",
         "appointed_on": "2023-04-09",
         "resigned_on": null
@@ -608,6 +666,7 @@
       {
         "officer_id": "off_5070",
         "name": "JENKINS, Mari",
+        "description": "Fixture description for officer off_5070",
         "role": "director",
         "appointed_on": "2013-03-08",
         "resigned_on": null
@@ -615,6 +674,7 @@
       {
         "officer_id": "off_5157",
         "name": "LLOYD, Owen",
+        "description": "Fixture description for officer off_5157",
         "role": "director",
         "appointed_on": "2018-09-15",
         "resigned_on": "2016-02-14"
@@ -622,6 +682,7 @@
       {
         "officer_id": "off_5338",
         "name": "BOWEN, Angharad",
+        "description": "Fixture description for officer off_5338",
         "role": "secretary",
         "appointed_on": "2021-01-28",
         "resigned_on": "2019-07-25"
@@ -631,6 +692,7 @@
   "RC207473": {
     "org_id": "RC207473",
     "name": "Elan Water Services Ltd",
+    "description": "Fixture description for organisation RC207473",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "1998-06-10",
@@ -652,6 +714,7 @@
       {
         "officer_id": "off_5477",
         "name": "BOWEN, Nia",
+        "description": "Fixture description for officer off_5477",
         "role": "director",
         "appointed_on": "2017-01-13",
         "resigned_on": null
@@ -659,6 +722,7 @@
       {
         "officer_id": "off_5644",
         "name": "PARRY, Gareth",
+        "description": "Fixture description for officer off_5644",
         "role": "director",
         "appointed_on": "2000-07-05",
         "resigned_on": null
@@ -668,6 +732,7 @@
   "RC809570": {
     "org_id": "RC809570",
     "name": "Berwyn Biotech Ltd",
+    "description": "Fixture description for organisation RC809570",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2006-07-11",
@@ -689,6 +754,7 @@
       {
         "officer_id": "off_5840",
         "name": "ROBERTS, Alys",
+        "description": "Fixture description for officer off_5840",
         "role": "director",
         "appointed_on": "2007-01-08",
         "resigned_on": null
@@ -696,6 +762,7 @@
       {
         "officer_id": "off_6014",
         "name": "ROBERTS, Lowri",
+        "description": "Fixture description for officer off_6014",
         "role": "director",
         "appointed_on": "2021-02-19",
         "resigned_on": "2011-04-05"
@@ -703,6 +770,7 @@
       {
         "officer_id": "off_6059",
         "name": "JONES, Seren",
+        "description": "Fixture description for officer off_6059",
         "role": "director",
         "appointed_on": "2017-10-20",
         "resigned_on": null
@@ -712,6 +780,7 @@
   "RC876646": {
     "org_id": "RC876646",
     "name": "Sirhowy Steel Ltd",
+    "description": "Fixture description for organisation RC876646",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2007-02-19",
@@ -734,6 +803,7 @@
       {
         "officer_id": "off_6065",
         "name": "EDWARDS, Dafydd",
+        "description": "Fixture description for officer off_6065",
         "role": "director",
         "appointed_on": "2017-07-27",
         "resigned_on": null
@@ -741,6 +811,7 @@
       {
         "officer_id": "off_6230",
         "name": "WILLIAMS, Rhys",
+        "description": "Fixture description for officer off_6230",
         "role": "director",
         "appointed_on": "2018-08-23",
         "resigned_on": null
@@ -748,6 +819,7 @@
       {
         "officer_id": "off_6431",
         "name": "LLOYD, Alys",
+        "description": "Fixture description for officer off_6431",
         "role": "secretary",
         "appointed_on": "2024-08-15",
         "resigned_on": "2024-11-09"
@@ -755,6 +827,7 @@
       {
         "officer_id": "off_6516",
         "name": "EVANS, Sioned",
+        "description": "Fixture description for officer off_6516",
         "role": "secretary",
         "appointed_on": "2015-04-27",
         "resigned_on": null
@@ -762,6 +835,7 @@
       {
         "officer_id": "off_6711",
         "name": "VAUGHAN, Iestyn",
+        "description": "Fixture description for officer off_6711",
         "role": "secretary",
         "appointed_on": "2014-08-19",
         "resigned_on": null
@@ -771,6 +845,7 @@
   "RC671858": {
     "org_id": "RC671858",
     "name": "Dyfi Publishing Ltd",
+    "description": "Fixture description for organisation RC671858",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2008-01-16",
@@ -792,6 +867,7 @@
       {
         "officer_id": "off_6856",
         "name": "EDWARDS, Elin",
+        "description": "Fixture description for officer off_6856",
         "role": "director",
         "appointed_on": "2023-04-23",
         "resigned_on": null
@@ -799,6 +875,7 @@
       {
         "officer_id": "off_7061",
         "name": "MORGAN, Huw",
+        "description": "Fixture description for officer off_7061",
         "role": "director",
         "appointed_on": "2022-01-03",
         "resigned_on": null
@@ -808,6 +885,7 @@
   "RC191161": {
     "org_id": "RC191161",
     "name": "Caldey Coffee Ltd",
+    "description": "Fixture description for organisation RC191161",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2020-04-10",
@@ -829,6 +907,7 @@
       {
         "officer_id": "off_7094",
         "name": "THOMAS, Bethan",
+        "description": "Fixture description for officer off_7094",
         "role": "director",
         "appointed_on": "2022-12-18",
         "resigned_on": null
@@ -838,6 +917,7 @@
   "RC719176": {
     "org_id": "RC719176",
     "name": "Tywi Transport Ltd",
+    "description": "Fixture description for organisation RC719176",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2021-08-09",
@@ -859,6 +939,7 @@
       {
         "officer_id": "off_7123",
         "name": "MORGAN, Aled",
+        "description": "Fixture description for officer off_7123",
         "role": "director",
         "appointed_on": "2024-01-19",
         "resigned_on": "2023-11-28"
@@ -866,6 +947,7 @@
       {
         "officer_id": "off_7173",
         "name": "EDWARDS, Dafydd",
+        "description": "Fixture description for officer off_7173",
         "role": "director",
         "appointed_on": "2023-01-09",
         "resigned_on": null
@@ -873,6 +955,7 @@
       {
         "officer_id": "off_7301",
         "name": "PRICE, Carys",
+        "description": "Fixture description for officer off_7301",
         "role": "director",
         "appointed_on": "2024-02-19",
         "resigned_on": null
@@ -882,6 +965,7 @@
   "RC542417": {
     "org_id": "RC542417",
     "name": "Usk Energy Ltd",
+    "description": "Fixture description for organisation RC542417",
     "status": "active",
     "type": "private-limited",
     "incorporated_on": "2016-05-03",
@@ -903,6 +987,7 @@
       {
         "officer_id": "off_7344",
         "name": "PHILLIPS, Rhian",
+        "description": "Fixture description for officer off_7344",
         "role": "director",
         "appointed_on": "2017-04-06",
         "resigned_on": "2020-05-22"
@@ -910,6 +995,7 @@
       {
         "officer_id": "off_7421",
         "name": "MORGAN, Mari",
+        "description": "Fixture description for officer off_7421",
         "role": "secretary",
         "appointed_on": "2023-01-08",
         "resigned_on": "2023-08-23"
@@ -917,6 +1003,7 @@
       {
         "officer_id": "off_7491",
         "name": "ROBERTS, Rhys",
+        "description": "Fixture description for officer off_7491",
         "role": "secretary",
         "appointed_on": "2019-11-19",
         "resigned_on": "2024-02-22"
@@ -924,6 +1011,7 @@
       {
         "officer_id": "off_7705",
         "name": "PRICE, Gareth",
+        "description": "Fixture description for officer off_7705",
         "role": "director",
         "appointed_on": "2020-03-03",
         "resigned_on": "2020-11-05"
@@ -931,6 +1019,7 @@
       {
         "officer_id": "off_7820",
         "name": "MORGAN, Mari",
+        "description": "Fixture description for officer off_7820",
         "role": "director",
         "appointed_on": "2020-02-15",
         "resigned_on": null

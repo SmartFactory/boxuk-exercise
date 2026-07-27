@@ -6,6 +6,7 @@
     "require": {
         "php": ">=8.3",
         "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^2.0",
         "drupal/core-composer-scaffold": "^11.1",
         "drupal/core-recommended": "^11.1",
         "drush/drush": "^13"
@@ -47,5 +48,10 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [{
+        "name": "drupal",
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+    }]
 }

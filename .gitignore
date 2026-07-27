@@ -5,7 +5,7 @@
 /web/themes/contrib/
 /web/profiles/contrib/
 /web/libraries/
-composer.lock
+# composer.lock
 
 # Site-local files.
 /web/sites/*/files/

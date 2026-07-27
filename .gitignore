@@ -27,6 +27,8 @@ composer.lock
 /web/sites/example.sites.php
 /web/INSTALL.txt
 /web/README.md
+# Ignore my local development services
+web/sites/default/local.services.yml
 
 # Tooling.
 /.phpunit.cache/

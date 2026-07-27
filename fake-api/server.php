@@ -146,6 +146,22 @@ if (mt_rand(1, 10000) <= (int) round($failureRate * 10000)) {
 
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?: '/';
 
+// 1. New route: Handle the bulk catalog listing
+if ($path === '/v1/organisations' || $path === '/v1/organisations/') {
+  $data = json_decode((string) file_get_contents(__DIR__ . '/data/organisations.json'), true);
+  
+  // Clean the data to match individual item schemas by omitting anidated officers array
+  $cleanCatalog = [];
+  foreach ($data as $id => $org) {
+    $profile = $org;
+    unset($profile['officers']);
+    $cleanCatalog[$id] = $profile;
+  }
+  
+  respondJson(200, $cleanCatalog);
+}
+
+// 2. Existing route: Fallback to handle individual lookups
 if (!preg_match('#^/v1/organisations/([^/]+)(/officers)?$#', $path, $m)) {
   respondError(404, 'not_found', 'Unknown endpoint.');
 }

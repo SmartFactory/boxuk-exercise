@@ -1,0 +1,116 @@
+#!/bin/bash
+
+## Description: Test an organisation enrichment solution and display its service/provider
+## Usage: org:test [org_id] [--cr] [--module=ai_codex|test_a|test_b]
+## Example: "ddev org:test RC482913" or "ddev org:test RC482913 --module=test_b --cr"
+
+show_help() {
+    printf '%s\n' \
+        'Test an organisation enrichment solution.' \
+        '' \
+        'Usage:' \
+        '  ddev org:test ORGANISATION_ID [OPTIONS]' \
+        '' \
+        'Arguments:' \
+        '  ORGANISATION_ID       Two letters followed by six digits, e.g. RC482913' \
+        '' \
+        'Options:' \
+        '  --module=ai_codex     Use org_enrichment_ai_codex (default)' \
+        '  --module=test_a       Use org_enrichment_test_a' \
+        '  --module=test_b       Use org_enrichment_test_b' \
+        '  --cr                  Rebuild Drupal caches before testing' \
+        '  -h, --help            Display this help' \
+        '' \
+        'Examples:' \
+        '  ddev org:test RC482913' \
+        '  ddev org:test DM000001 --cr' \
+        '  ddev org:test RC482913 --module=test_a --cr' \
+        '  ddev org:test RC482913 --module=test_b --cr'
+}
+
+# Display help before validating the mandatory organisation ID.
+case "${1:-}" in
+    -h|--help)
+        show_help
+        exit 0
+        ;;
+esac
+
+# 1. Validate that the mandatory argument (organisation ID) is provided.
+if [ -z "$1" ]; then
+    echo "❌ Error: You must provide an organisation ID."
+    echo ""
+    show_help
+    exit 1
+fi
+
+ORG_ID=$1
+MODULE="ai_codex"
+REBUILD_CACHE=false
+
+# 2. Read optional flags.
+for ARG in "${@:2}"; do
+    case "$ARG" in
+        --cr)
+            REBUILD_CACHE=true
+            ;;
+        --module=ai_codex)
+            MODULE="ai_codex"
+            ;;
+        --module=test_a)
+            MODULE="test_a"
+            ;;
+        --module=test_b)
+            MODULE="test_b"
+            ;;
+        *)
+            echo "❌ Unknown option: $ARG"
+            exit 1
+            ;;
+    esac
+done
+
+if [[ ! "$ORG_ID" =~ ^[A-Za-z]{2}[0-9]{6}$ ]]; then
+    echo "❌ Invalid organisation ID: $ORG_ID"
+    exit 1
+fi
+
+SERVICE_ID="org_enrichment_${MODULE}.enricher"
+
+# 3. Run Drupal cache rebuild if the --cr flag is present.
+if [ "$REBUILD_CACHE" = true ]; then
+    echo "🧹 Rebuilding Drupal cache..."
+    drush cr
+    echo ""
+fi
+
+# 4. Display the selected service and provider, when applicable.
+echo "🔍 CURRENT ENRICHMENT SERVICE:"
+echo "--------------------------------------------------"
+drush php:eval '$service = \Drupal::service("'"$SERVICE_ID"'"); print "Class: " . get_class($service) . PHP_EOL;'
+
+if [ "$MODULE" = "ai_codex" ]; then
+    drush php:eval '
+    $provider = \Drupal::service("Drupal\org_enrichment_ai_codex\Provider\OrganisationProviderInterface");
+    print "Provider: " . get_class($provider) . PHP_EOL;
+    print "Cache Key: " . $provider->getCacheKey() . PHP_EOL;
+    '
+fi
+
+echo "--------------------------------------------------"
+echo ""
+
+# 5. Execute the enrichment for the requested ID.
+echo "🚀 Running enrichment for: $ORG_ID"
+echo "--------------------------------------------------"
+
+drush php:eval '
+try {
+  $profile = \Drupal::service("'"$SERVICE_ID"'")->enrich("'"$ORG_ID"'");
+  print json_encode($profile, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . PHP_EOL;
+} catch (\Exception $e) {
+  print "❌ Error during processing:" . PHP_EOL;
+  print $e->getMessage() . PHP_EOL;
+  exit(1);
+}
+'

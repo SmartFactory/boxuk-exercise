@@ -16,7 +16,8 @@ database:
 #   https://boxuk-org-enrichment-test.ddev.site:8443
 web_extra_daemons:
   - name: kestrel-api
-    command: "php -S 0.0.0.0:8000 fake-api/server.php"
+    command: "FAILURE_RATE=0.55 php -S 0.0.0.0:8000 fake-api/server.php"
+    # command: "php -S 0.0.0.0:8000 fake-api/server.php"
     directory: /var/www/html
 
 web_extra_exposed_ports:
